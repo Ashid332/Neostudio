@@ -56,52 +56,70 @@
     </header>
 
     <main class="page-offset">
-<section class="neo-clone container max-w-7xl mx-auto px-6 py-24">
+<section class="neo-clone max-w-[1300px] mx-auto px-6 lg:px-12 py-24">
 
-  <div class="neo-hero grid grid-cols-1 lg:grid-cols-2 gap-16">
-    <div class="neo-left">
-      <h1 class="text-5xl lg:text-6xl max-w-[700px] leading-tight tracking-tight">
+  <!-- Hero Section -->
+  <div class="neo-hero grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+    <div class="neo-left lg:col-span-7">
+      <h1 class="text-4xl md:text-5xl lg:text-[52px] font-semibold max-w-[700px] leading-[1.15] tracking-tight text-[#111]">
         Great spaces are crafted with skill,<br>
         passion, and attention to detail.
       </h1>
     </div>
 
-    <div class="neo-right flex flex-col justify-end">
-      <p class="text-[16px] lg:text-[18px] leading-relaxed text-gray-600 mb-8 max-w-lg">
+    <!-- Right text block offset to the right slightly as in screenshot -->
+    <div class="neo-right lg:col-span-5 flex flex-col justify-end pt-4 lg:pt-0">
+      <p class="text-[17px] leading-[1.7] text-gray-700 mb-6 max-w-[480px]">
         From initial design support to final delivery, our complete business model ensures excellence at every stage of the project lifecycle.
       </p>
-      <a href="#" class="neo-link text-sm border-b border-gray-300 hover:border-[#0A1B3D] w-fit pb-1 flex items-center transition-colors">Discover more <span class="ml-1 text-xs">→</span></a>
+      
+      <!-- Button matching the yellow box in screenshot -->
+      <a href="#" class="w-fit text-[16px] text-gray-800 flex items-center transition-opacity hover:opacity-80">
+        Discover more 
+        <span class="ml-3 flex items-center justify-center w-[22px] h-[22px] bg-[#D9E021] border border-black rounded-[2px]">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </span>
+      </a>
     </div>
   </div>
 
-  <div class="neo-line h-[1px] bg-gray-200 my-12 w-full"></div>
+  <div class="w-full h-[1px] bg-gray-200 mt-24 mb-16"></div>
 
-  <div class="neo-row grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+  <!-- Rows -->
+  <div class="neo-row grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
     <div>
-      <h2 class="text-2xl font-medium text-[#0A1B3D] mb-4">Residential Interiors</h2>
-      <p class="text-[16px] lg:text-[18px] text-gray-600 leading-relaxed">Curating the Art of Living Well from modern 2 BHK flat design to expansive 3 BHK interior design.</p>
+      <h2 class="text-[28px] font-medium text-[#111] mb-3">Residential Interiors</h2>
+      <p class="text-[16px] text-gray-500 leading-relaxed max-w-[500px]">Curating the Art of Living Well from modern 2 BHK flat design to expansive 3 BHK interior design.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="aspect-[4/3] object-cover rounded-xl w-full">
+    <div class="flex justify-start lg:justify-end">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="aspect-[4/3] object-cover rounded-xl w-full max-w-[500px] lg:max-w-full">
+    </div>
   </div>
 
-  <div class="neo-line h-[1px] bg-gray-200 my-12 w-full"></div>
+  <div class="w-full h-[1px] bg-gray-200 my-16"></div>
 
-  <div class="neo-row grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+  <div class="neo-row grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
     <div>
-      <h2 class="text-2xl font-medium text-[#0A1B3D] mb-4">Living Room Designs</h2>
-      <p class="text-[16px] lg:text-[18px] text-gray-600 leading-relaxed">The Social Heart: Timeless living spaces tailored for connection.</p>
+      <h2 class="text-[28px] font-medium text-[#111] mb-3">Living Room Designs</h2>
+      <p class="text-[16px] text-gray-500 leading-relaxed max-w-[500px]">The Social Heart: Timeless living spaces tailored for connection.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6" class="aspect-[4/3] object-cover rounded-xl w-full">
+    <div class="flex justify-start lg:justify-end">
+      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6" class="aspect-[4/3] object-cover rounded-xl w-full max-w-[500px] lg:max-w-full">
+    </div>
   </div>
 
-  <div class="neo-line h-[1px] bg-gray-200 my-12 w-full"></div>
+  <div class="w-full h-[1px] bg-gray-200 my-16"></div>
 
-  <div class="neo-row grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+  <div class="neo-row grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
     <div>
-      <h2 class="text-2xl font-medium text-[#0A1B3D] mb-4">Kitchens</h2>
-      <p class="text-[16px] lg:text-[18px] text-gray-600 leading-relaxed">The Culinary Studio: Functional kitchen interior design that inspires.</p>
+      <h2 class="text-[28px] font-medium text-[#111] mb-3">Kitchens</h2>
+      <p class="text-[16px] text-gray-500 leading-relaxed max-w-[500px]">The Culinary Studio: Functional kitchen interior design that inspires.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" alt="Kitchen Design" class="aspect-[4/3] object-cover rounded-xl w-full">
+    <div class="flex justify-start lg:justify-end">
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" alt="Kitchen Design" class="aspect-[4/3] object-cover rounded-xl w-full max-w-[500px] lg:max-w-full">
+    </div>
   </div>
 
 </section>
