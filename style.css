@@ -4320,59 +4320,72 @@ body {
 }
 
 .neo-clone {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 100px 20px;
+  padding: 140px 40px 100px;
+  background-color: #ffffff;
 }
 
 .neo-hero {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 80px;
-  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+  margin-bottom: 120px;
 }
 
-/* Ensure the large italic headline is handled inside .neo-left h1 specifically */
+/* Ensure the large headline is handled inside .neo-left h1 specifically */
+.neo-left {
+  flex: 0 0 62%;
+}
+
 .neo-left h1 {
-  font-size: 2.8rem;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.2;
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   margin: 0;
-  color: #111;
+  color: var(--logo-blue, #0A1B3D);
 }
 
 .neo-right {
+  flex: 0 0 32%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-bottom: 0.5rem;
 }
 
 .neo-right p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #555;
-  margin: 0 0 20px 0;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0 0 35px 0;
+  font-weight: 400;
 }
 
 .neo-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding: 60px 0;
+  gap: 80px;
+  padding: 80px 0;
 }
 
 /* Ensure headings/paragraphs in rows keep the nice visual hierarchy inside the section so globals don't ruin it */
 .neo-row h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  color: #111;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--logo-blue, #0A1B3D);
 }
 
 .neo-row p {
-  max-width: 500px;
+  max-width: 480px;
   line-height: 1.6;
   font-size: 1.1rem;
   color: #555;
@@ -4380,34 +4393,57 @@ body {
 }
 
 .neo-row img {
-  width: 100%;
-  height: 300px;
+  width: 55%;
+  height: 450px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.neo-row > div {
+  width: 40%;
 }
 
 .neo-line {
   height: 1px;
-  background: #e5e5e5;
+  background: #eaeaea;
+  width: 100%;
 }
 
 .neo-link {
   text-decoration: none;
   font-weight: 500;
-  color: #111;
-  font-size: 1rem;
+  color: var(--logo-blue, #0A1B3D);
+  font-size: 1.05rem;
   width: fit-content;
-  border-bottom: 1px solid black;
-  transition: opacity 0.2s;
+  border-bottom: 1px solid rgba(10, 27, 61, 0.2);
+  padding-bottom: 6px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .neo-link:hover {
-  opacity: 0.7;
+  border-bottom-color: var(--logo-blue, #0A1B3D);
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
+  .neo-clone {
+    padding: 80px 20px 60px;
+  }
   .neo-hero,
   .neo-row {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .neo-left, .neo-right, .neo-row > div, .neo-row img {
+    flex: none;
+    width: 100%;
+  }
+  .neo-left h1 {
+    font-size: 2.8rem;
+  }
+  .neo-row img {
+    height: 300px;
   }
 }
