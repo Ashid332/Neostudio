@@ -4315,72 +4315,99 @@ header.scrolled .logo-wrapper {
 }
 
 /* --- Neo Wrapper Specific Styles (Projects Page) --- */
-.neo-wrapper {
+.neo-page {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 100px 20px;
+  background: #ffffff;
 }
 
 .neo-hero {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 80px;
+  gap: 100px;
   margin-bottom: 100px;
 }
 
-/* Added .neo-hero-left h1 specific styling to ensure it matches the reference (large italic font if not already styled by globals) */
 .neo-hero-left h1 {
-  font-family: inherit;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 400;
   font-style: italic;
   line-height: 1.2;
   margin: 0;
+  color: #111;
+}
+
+.neo-hero-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .neo-hero-right p {
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #555;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
-.neo-section {
+.neo-discover {
+  display: inline-block;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  font-size: 1rem;
+  border-bottom: 1px solid #111;
+  padding-bottom: 4px;
+  width: fit-content;
+  transition: opacity 0.2s;
+}
+
+.neo-discover:hover {
+  opacity: 0.7;
+}
+
+.neo-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 80px;
   align-items: center;
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
 .neo-text h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  color: #111;
 }
 
 .neo-text p {
-  font-size: 1.1rem;
+  max-width: 500px;
   line-height: 1.6;
+  font-size: 1.1rem;
   color: #555;
   margin: 0;
 }
 
-.neo-image img {
+.neo-img img {
   width: 100%;
   height: 320px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-hr {
+.neo-divider {
+  height: 1px;
+  background: #e5e5e5;
+  margin: 0;
   border: none;
-  border-top: 1px solid #e5e5e5;
 }
 
 @media (max-width: 768px) {
   .neo-hero,
-  .neo-section {
+  .neo-row {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
