@@ -1015,7 +1015,7 @@ header.scrolled .logo-wrapper {
 
 /* Tiered Pricing Section Rebuilt */
 .tiered-pricing {
-    background: #f8f9fa;
+    background: #fff;
     padding: 100px 0;
     color: #111;
 }
@@ -1124,65 +1124,54 @@ header.scrolled .logo-wrapper {
 /* Simple Service Layout */
 /* Uniform Service Grid */
 .category-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* Forces perfectly equal width */
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
     align-items: stretch;
-    /* Forces perfectly equal height */
-}
-
-@media (max-width: 992px) {
-    .category-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .category-list {
-        grid-template-columns: 1fr;
-    }
 }
 
 .category-item {
-    background: #fff;
-    padding: 40px 30px;
-    border: 1px solid #eef0f5;
-    border-top: 4px solid var(--logo-blue);
-    border-radius: 0 0 12px 12px;
+    background: transparent;
+    padding: 40px 0;
+    border: none;
+    border-top: 1px solid #eef0f5;
+    border-radius: 0;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(10, 27, 61, 0.05);
+    box-shadow: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.category-item:last-child {
+    border-bottom: 1px solid #eef0f5;
 }
 
 .category-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(10, 27, 61, 0.1);
-    border-color: var(--primary-yellow);
+    transform: none;
+    box-shadow: none;
+    border-color: #eef0f5;
+}
+
+.category-text {
+    flex: 1;
+    max-width: 600px;
 }
 
 .category-item h3 {
     font-family: "Times New Roman", Times, serif;
     font-size: 26px;
     font-weight: 700;
-    color: var(--logo-blue);
-    /* Brand Deep Blue */
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 15px;
+    color: #111;
+    margin-bottom: 15px;
+    position: static;
+    padding-bottom: 0;
 }
 
 .category-item h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 3px;
-    background: var(--primary-yellow);
-    /* Brand Yellow Accent */
+    display: none;
 }
 
 
@@ -1191,6 +1180,32 @@ header.scrolled .logo-wrapper {
     line-height: 1.7;
     color: #444;
     margin: 0;
+}
+
+.category-image {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .category-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .category-image {
+        width: 100%;
+        height: 250px;
+    }
 }
 
 
@@ -3689,7 +3704,8 @@ header.scrolled .logo-wrapper {
     }
 
     .category-list {
-        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
         gap: 40px !important;
         padding-top: 30px !important;
     }
@@ -4312,102 +4328,4 @@ header.scrolled .logo-wrapper {
     .warranty-heading {
         font-size: 32px !important;
     }
-}
-
-/* --- Neo Wrapper Specific Styles (Projects Page) --- */
-body {
-  background: #ffffff !important;
-}
-
-.neo-clone {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 100px 20px;
-}
-
-.neo-hero {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 80px;
-  margin-bottom: 80px;
-}
-
-/* Ensure the large italic headline is handled inside .neo-left h1 specifically */
-.neo-left h1 {
-  font-size: 2.8rem;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.2;
-  margin: 0;
-  color: #111;
-}
-
-.neo-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.neo-right p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #555;
-  margin: 0 0 20px 0;
-}
-
-.neo-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  padding: 60px 0;
-}
-
-/* Ensure headings/paragraphs in rows keep the nice visual hierarchy inside the section so globals don't ruin it */
-.neo-row h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  color: #111;
-}
-
-.neo-row p {
-  max-width: 500px;
-  line-height: 1.6;
-  font-size: 1.1rem;
-  color: #555;
-  margin: 0;
-}
-
-.neo-row img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.neo-line {
-  height: 1px;
-  background: #e5e5e5;
-}
-
-.neo-link {
-  text-decoration: none;
-  font-weight: 500;
-  color: #111;
-  font-size: 1rem;
-  width: fit-content;
-  border-bottom: 1px solid black;
-  transition: opacity 0.2s;
-}
-
-.neo-link:hover {
-  opacity: 0.7;
-}
-
-@media (max-width: 768px) {
-  .neo-hero,
-  .neo-row {
-    grid-template-columns: 1fr;
-  }
 }
