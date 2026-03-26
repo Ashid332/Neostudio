@@ -56,52 +56,54 @@
     </header>
 
     <main class="page-offset">
-<section class="neo-clone">
+<section class="max-w-7xl mx-auto px-6 py-20 lg:py-28">
 
-  <div class="neo-hero">
-    <div class="neo-left">
-      <h1>
+  <!-- Desktop: 2-column layout, Mobile: Stacked -->
+  <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 lg:items-end mb-16 lg:mb-24">
+    <div class="w-full lg:w-3/5 max-w-[700px]">
+      <h1 class="text-[28px] md:text-[40px] xl:text-[56px] 2xl:text-[64px] font-[300] leading-tight tracking-tight text-[#0A1B3D]">
         Great spaces are crafted with skill,<br>
         passion, and attention to detail.
       </h1>
     </div>
 
-    <div class="neo-right">
-      <p>
+    <div class="w-full lg:w-2/5 flex flex-col justify-end">
+      <p class="text-[16px] xl:text-[18px] leading-relaxed text-gray-600 mb-8 max-w-lg">
         From initial design support to final delivery, our complete business model ensures excellence at every stage of the project lifecycle.
       </p>
-      <a href="#" class="neo-link">Discover more →</a>
+      <a href="#" class="w-fit text-sm font-medium text-[#0A1B3D] border-b border-gray-300 hover:border-[#0A1B3D] transition-colors pb-1 flex items-center gap-1">
+        Discover more <span class="text-xs leading-none">→</span>
+      </a>
     </div>
   </div>
 
-  <div class="neo-line"></div>
+  <div class="w-full h-[1px] bg-gray-200 mb-16"></div>
 
-  <div class="neo-row">
-    <div>
-      <h2>Residential Interiors</h2>
-      <p>Curating the Art of Living Well from modern 2 BHK flat design to expansive 3 BHK interior design.</p>
+  <!-- Cards Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="group cursor-pointer">
+      <div class="overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] md:aspect-[16/10] xl:aspect-[4/3] mb-6">
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Residential Interiors">
+      </div>
+      <h2 class="text-xl md:text-2xl font-medium text-[#0A1B3D] mb-3">Residential Interiors</h2>
+      <p class="text-gray-600 text-sm xl:text-[15px] leading-relaxed">Curating the Art of Living Well from modern 2 BHK flat design to expansive 3 BHK interior design.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-  </div>
 
-  <div class="neo-line"></div>
-
-  <div class="neo-row">
-    <div>
-      <h2>Living Room Designs</h2>
-      <p>The Social Heart: Timeless living spaces tailored for connection.</p>
+    <div class="group cursor-pointer">
+      <div class="overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] md:aspect-[16/10] xl:aspect-[4/3] mb-6">
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6" alt="Living Room Designs">
+      </div>
+      <h2 class="text-xl md:text-2xl font-medium text-[#0A1B3D] mb-3">Living Room Designs</h2>
+      <p class="text-gray-600 text-sm xl:text-[15px] leading-relaxed">The Social Heart: Timeless living spaces tailored for connection.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
-  </div>
 
-  <div class="neo-line"></div>
-
-  <div class="neo-row">
-    <div>
-      <h2>Kitchens</h2>
-      <p>The Culinary Studio: Functional kitchen interior design that inspires.</p>
+    <div class="group cursor-pointer">
+      <div class="overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] md:aspect-[16/10] xl:aspect-[4/3] mb-6">
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" alt="Kitchen Design">
+      </div>
+      <h2 class="text-xl md:text-2xl font-medium text-[#0A1B3D] mb-3">Kitchens</h2>
+      <p class="text-gray-600 text-sm xl:text-[15px] leading-relaxed">The Culinary Studio: Functional kitchen interior design that inspires.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" alt="Kitchen Design">
   </div>
 
 </section>
